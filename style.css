@@ -1,0 +1,146 @@
+/* RESET + BASE */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:#000;
+  color:#fff;
+  -webkit-font-smoothing:antialiased;
+  scroll-behavior:smooth;
+}
+
+/* UTIL */
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* HEADER */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  background:rgba(0,0,0,0.45);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid rgba(255,255,255,0.04);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;height:72px;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{height:42px;display:block}
+.brand-text{font-weight:700;letter-spacing:0.4px}
+.nav{display:flex;gap:22px;align-items:center}
+.nav a{color:#fff;text-decoration:none;font-size:14px;opacity:0.95}
+.nav a:hover{color:#a6ff00}
+
+
+/* mobile toggle */
+.nav-toggle{display:none;background:none;border:0;color:#fff;font-size:20px}
+
+/* HERO */
+.hero{position:relative;height:100vh;display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.55)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.75))}
+.hero-content{position:relative;z-index:20;padding-top:60px}
+.hero-title{font-size:84px;line-height:0.95;margin:0;font-weight:800;letter-spacing:-1px}
+.hero-sub{max-width:740px;font-size:20px;color:#dbe3e0;margin-top:18px}
+.hero-buttons{margin-top:28px;display:flex;gap:14px}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:700}
+.btn-primary{background:#a6ff00;color:#07100a}
+.btn-ghost{background:rgba(255,255,255,0.9);color:#07100a}
+
+/* GLASS ABOUT (sits on top of hero bg) */
+.about{
+  margin-top:-10vh; /* lift up to sit over hero */
+  padding:36px;
+}
+.glass{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  border-radius:16px;
+  box-shadow: 0 8px 30px rgba(36, 35, 35, 0.6);
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------- SECTION STYLE ---------------- */
+
+.section {
+  padding: 80px 8%;
+  margin-top: 60px;
+}
+
+/* judul */
+.section h2 {
+  font-size: 50px;
+  margin-bottom: 25px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* ---------------- CARD GRID ---------------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* ---------------- CARD STYLE ---------------- */
+
+.card {
+  background: #111;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  margin-bottom: 1px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.08);
+}
+
+/* partner logo */
+.partner-card img {
+  height: 70px;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer {
+  text-align: center;
+  padding: 40px;
+  margin-top: 100px;
+  border-top: 1px solid #333;
+  color: #aaa;
+}
+
+
+/* FOOTER */
+.site-footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.04);text-align:center;color:#bbb;font-size:14px}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+  .hero-title{font-size:46px}
+  .grid{grid-template-columns:1fr;gap:12px}
+  .nav{display:none}
+  .nav-toggle{display:block}
+} 
